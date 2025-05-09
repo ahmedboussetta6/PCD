@@ -1,0 +1,198 @@
+.verify-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  padding-top: var(--spacing-xxl);
+  animation: fadeIn 0.8s ease;
+  position: relative;
+}
+
+.verify-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.verify-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.verify-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.verify-form-container {
+  background-color: var(--surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn 0.8s ease 0.2s both;
+  border: 1px solid var(--border);
+}
+
+.verify-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.verify-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--surface-2);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.verify-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 158, 255, 0.2);
+}
+
+.verify-input::placeholder {
+  color: var(--text-disabled);
+}
+
+.verify-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.verify-button:hover {
+  box-shadow: 0 4px 12px rgba(79, 158, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.verify-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.verify-button-icon {
+  margin-right: var(--spacing-sm);
+}
+
+.verify-error {
+  color: var(--error);
+  margin-top: var(--spacing-sm);
+  animation: fadeIn 0.3s ease;
+}
+.bg-green-500{
+  background-color: rgba(3, 218, 198, 0.1);
+  border: 1px solid rgba(3, 218, 198, 0.3);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  animation: slideUp 0.5s ease;
+}
+.bg-green-500 h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: var(--spacing-md);
+}
+.bg-red-500{
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(218, 3, 3, 0.3);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  animation: slideUp 0.5s ease;
+}
+.bg-red-500 h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: var(--spacing-md);
+}
+
+
+.verify-result-content {
+  background-color: var(--surface-2);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--border);
+}
+
+.verify-result-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.verify-result-text {
+  font-size: 1.25rem;
+  margin-top: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.verify-result-message {
+  color: var(--secondary);
+}
+
+.verify-help {
+  margin-top: var(--spacing-xxl);
+  background-color: var(--surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  animation: fadeIn 0.8s ease 0.4s both;
+  border: 1px solid var(--border);
+}
+
+.verify-help-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.verify-help-list {
+  list-style-position: inside;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.verify-help-list li {
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.verify-help-list li::marker {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .verify-form {
+    flex-direction: row;
+  }
+
+  .verify-input {
+    flex-grow: 1;
+  }
+}
